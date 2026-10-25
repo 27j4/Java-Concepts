@@ -9,7 +9,7 @@ public class ThenApply {
                 Executors.newSingleThreadExecutor();
 
         try {
-            CompletableFuture<String> name =
+            CompletableFuturePrac<String> name =
                     getFirstName().thenApplyAsync(firstname -> {
                         System.out.println(
                                 "Callback thread: " +
@@ -30,11 +30,11 @@ public class ThenApply {
         }
     }
 
-    static CompletableFuture<String> getFirstName() {
-        return CompletableFuture.completedFuture("Anshul");
+    static CompletableFuturePrac<String> getFirstName() {
+        return CompletableFuturePrac.completedFuture("Anshul");
     }
 
-    static CompletableFuture<String> getLastName() {
-        return CompletableFuture.completedFuture(" Pandey");
+    static CompletableFuturePrac<String> getLastName() {
+        return CompletableFuturePrac.completedFuture(" Pandey");
     }
 }
